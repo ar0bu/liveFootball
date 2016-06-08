@@ -1,0 +1,50 @@
+<ion-view view-title="League Info">
+    <ion-content class="padding">
+       
+       <div class="col col-1">
+       	<div class="well">
+       		<h3 class="title text-center">{{leagueInfo.caption}}</h3>
+       		<hr />
+
+       		<div class="row custom-row">
+       			<div class="col col-50">
+       				<label>Year:</label> 
+       				<span class="label label-info">{{leagueInfo.year}}</span>
+       			</div>
+       			<div class="col col-50">
+       				<label>Match days:</label>
+       				<span class="label label-info">{{leagueInfo.numberOfMatchdays}}</span>
+       			</div>
+       		</div>
+
+       		<div class="row custom-row">
+       			<div class="col col-50">
+       				<label>Teams number:</label>
+       				<span class="label label-info">{{leagueInfo.numberOfTeams}}</span>
+       			</div>
+       			<div class="col col-50">
+       				<label>Games number:</label>
+       				<span class="label label-info">{{leagueInfo.numberOfGames}}</span>
+       			</div>
+       		</div>
+
+       		<div class="row custom-row text-center">
+       			<div class="col col-1">
+       				<label class="block">Last update:</label>
+       				<span class="label label-info">{{leagueInfo.lastUpdated | date: 'MMM d, y h:mm:ss a'}}</span>
+       			</div>
+       		</div>
+       	</div>
+       </div>
+
+        <a class="button button-outline button-full button-stable text-left icon icon-right ion-chevron-right"
+           ui-sref="tabs.league-teams({leagueID:leagueInfo.id, leagueName: leagueInfo.caption})">League Teams</a>
+  
+        <a  class="button button-outline button-full button-stable text-left icon icon-right ion-chevron-right" 
+        	ui-sref="tabs.league-fix({leagueID:leagueInfo.id, leagueName: leagueInfo.caption})">League Fixtures</a>
+
+        <a class="button button-outline button-full button-stable text-left icon icon-right ion-chevron-right"
+           ui-sref="tabs.league-table({leagueID:leagueInfo.id, leagueName: leagueInfo.caption})">League Table</a>
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,34 @@
+<ion-view view-title="Team Info">
+    <ion-content class="padding">
+        <div class="col col-1">
+            <div class="well text-center">
+            	<h3 class="title text-center">{{teamInfo.name}}</h3>
+            	<hr />
+        		<h4 class="title text-center">Logo</h4>
+        		<img ng-src="{{teamInfo.crestUrl}}" class="img-responsive text-center custom-img" />
+        		<hr />
+        		<h4>Squad Market Value</h4>
+        		<span class="label label-info" ng-show="teamInfo.squadMarketValue">
+        			{{teamInfo.squadMarketValue}}
+        		</span>
+        		<span class="label label-danger" ng-show="!teamInfo.squadMarketValue">
+        			Unavailable
+        		</span>
+            </div>
+        </div>
+       	<div class="row custom-row">
+       		<div class="col col-50">
+	        	<a ui-sref="tabs.team-fixture" 
+	        	   class="button button-outline button-positive">
+	        	   <i class="ion ion-calendar"></i> Team Fixtures
+	        	</a>
+        	</div>
+	        <div class="col col-50">
+	        	<a ui-sref="tabs.team-players" 
+	        	   class="button button-outline button-positive">
+	        	   <i class="ion ion-person-stalker"></i> Team Players
+	        	</a>
+	        </div>
+       	</div>
+    </ion-content>
+</ion-view>

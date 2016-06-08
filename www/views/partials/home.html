@@ -1,0 +1,10 @@
+<ion-view view-title="Select League Table">
+    <ion-content class="padding">
+    	<div class="col col-1" ng-repeat="league in leagues | orderBy: 'caption'">
+    		<a ui-sref="tabs.league-info({leagueID: league.id})"
+    		   class="button button-outline button-full button-positive text-left icon icon-right ion-chevron-right">
+    		   {{league.caption}}
+    		</a>
+    	</div>
+    </ion-content>
+</ion-view>

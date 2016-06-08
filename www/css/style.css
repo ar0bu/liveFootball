@@ -1,0 +1,22 @@
+/* Empty. Add your own CSS if you like */
+
+.custom-row {
+	margin:0px !important;
+	text-align: center;
+}
+
+.custom-img {
+	max-width: 50%;
+	display: block;
+	margin:0 auto;
+}
+
+.team-img {
+	max-width: 10%;
+	display: inline;
+	margin-right: 1%;
+}
+
+.block {
+	display: block;
+}

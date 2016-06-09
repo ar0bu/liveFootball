@@ -1,6 +1,6 @@
 <ion-view view-title="League Info">
     <ion-content class="padding">
-       
+
        <div class="col col-1">
        	<div class="well">
        		<h3 class="title text-center">{{leagueInfo.caption}}</h3>
@@ -8,7 +8,7 @@
 
        		<div class="row custom-row">
        			<div class="col col-50">
-       				<label>Year:</label> 
+       				<label>Year:</label>
        				<span class="label label-info">{{leagueInfo.year}}</span>
        			</div>
        			<div class="col col-50">
@@ -39,12 +39,13 @@
 
         <a class="button button-outline button-full button-stable text-left icon icon-right ion-chevron-right"
            ui-sref="tabs.league-teams({leagueID:leagueInfo.id, leagueName: leagueInfo.caption})">League Teams</a>
-  
-        <a  class="button button-outline button-full button-stable text-left icon icon-right ion-chevron-right" 
+
+        <a  class="button button-outline button-full button-stable text-left icon icon-right ion-chevron-right"
         	ui-sref="tabs.league-fix({leagueID:leagueInfo.id, leagueName: leagueInfo.caption})">League Fixtures</a>
 
         <a class="button button-outline button-full button-stable text-left icon icon-right ion-chevron-right"
-           ui-sref="tabs.league-table({leagueID:leagueInfo.id, leagueName: leagueInfo.caption})">League Table</a>
+           ui-sref="tabs.league-table({leagueID:leagueInfo.id, leagueName: leagueInfo.caption})"
+            ng-if="leagueInfo.caption !== 'Champions League 2015/16' ">League Table</a>
 
     </ion-content>
 </ion-view>

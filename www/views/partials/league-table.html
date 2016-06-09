@@ -11,17 +11,16 @@
 				Points
 			</div>
   		</div>
-  		<div class="col col-1" ng-repeat="team in leagueTable.standing | orderBy: 'position'">	
+  		<div class="col col-1" ng-repeat="team in leagueTable.standing | orderBy: 'position'">
         	<a ui-sref="tabs.team-info({teamID: team._links.team.href})"
         	   class="button button-outline button-full button-positive text-left">
         	   <span>{{team.position}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         	   <span>
-        	   		<img ng-src="{{team.crestURI}}"" class="img-responsive team-img" />
+        	   		<img ng-src="{{team.crestURI}}" class="img-responsive team-img" />
         	   	</span>
         	   {{team.teamName}}
-
         	   <span class="pull-right">{{team.points}}</span>
         	</a>
-        </div>	
+      </div>
     </ion-content>
 </ion-view>

@@ -1,0 +1,43 @@
+<ion-view view-title="{{tName}} Fixtures">
+    <ion-content class="padding">
+
+       <div ng-repeat="teamFix in teamFixtures.fixtures | orderBy: '-date' ">
+            <div class="col col-1">
+                <div class="well">
+                    <div class="col col-1 text-center">
+                        <label class="block">Match day:</label>
+                        <span class="label label-info">{{teamFix.matchday}}</span>
+                    </div>
+                    <div class="row custom-row">
+                        <div class="col col-50 text-center">
+                            <label class="">Date:</label>
+                            <span class="label label-info">{{teamFix.date | date: 'medium'}}</span>
+                        </div>
+                        <div class="col col-50 text-center">
+                            <label class="block">Status:</label>
+                            <span class="label"
+                                  ng-class="{'label-danger': teamFix.status == 'FINISHED', 'label-info': teamFix-status !== 'FINISHED'}">{{teamFix.status}}
+                            </span>
+                        </div>  
+                    </div>
+                    <hr />
+                    <div class="row custom-row">
+                        <div class="col col-33">
+                            <label class="title">{{teamFix.homeTeamName}}</label>
+                        </div>
+                        <div class="col col-33">
+                            <span class="label" 
+                                  ng-class="{'label-primary': teamFix.result.goalsHomeTeam > teamFix.result.goalsAwayTeam, 'label-warning': teamFix.result.goalsHomeTeam == teamFix.result.goalsAwayTeam, 'label-danger': teamFix.result.goalsHomeTeam <teamFix.result.goalsAwayTeam }">{{teamFix.result.goalsHomeTeam}}</span>
+                            -
+                            <span class="label"
+                                  ng-class="{'label-primary': teamFix.result.goalsHomeTeam < teamFix.result.goalsAwayTeam, 'label-warning': teamFix.result.goalsHomeTeam == teamFix.result.goalsAwayTeam, 'label-danger': teamFix.result.goalsHomeTeam >teamFix.result.goalsAwayTeam}">{{teamFix.result.goalsAwayTeam}}</span>
+                        </div>
+                        <div class="col col-33">
+                            <label class="title">{{teamFix.awayTeamName}}</label>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+       </div>
+    </ion-content>
+</ion-view>

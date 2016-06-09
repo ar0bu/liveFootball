@@ -18,13 +18,13 @@
         </div>
        	<div class="row custom-row">
        		<div class="col col-50">
-	        	<a ui-sref="tabs.team-fixture" 
+	        	<a ui-sref="tabs.team-fix({teamID: teamInfo._links.fixtures.href, teamName: teamInfo.name})"
 	        	   class="button button-outline button-positive">
 	        	   <i class="ion ion-calendar"></i> Team Fixtures
 	        	</a>
         	</div>
 	        <div class="col col-50">
-	        	<a ui-sref="tabs.team-players" 
+	        	<a ui-sref="tabs.team-player({teamID: teamInfo._links.players.href, teamName: teamInfo.name})"
 	        	   class="button button-outline button-positive">
 	        	   <i class="ion ion-person-stalker"></i> Team Players
 	        	</a>

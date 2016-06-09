@@ -79,6 +79,26 @@
                     }
                 }
             })
+            .state('tabs.team-fix', {
+                url: "/team-fix",
+                params: {teamID: null, teamName: null},
+                views: {
+                    'main-tab': {
+                        templateUrl: "/views/partials/team-fix.html",
+                        controller: 'TeamFixturesCtrl'
+                    }
+                }
+            })
+            .state('tabs.team-player', {
+                url: "/team-player",
+                params: {teamID: null, teamName: null},
+                views: {
+                    'main-tab': {
+                        templateUrl: "/views/partials/team-player.html",
+                        controller: 'TeamPlayerCtrl'
+                    }
+                }
+            })
             .state('tabs.about', {
                 url: "/about",
                 views: {

@@ -16,6 +16,7 @@
 					.getTeam($stateParams.teamID = getTeamID)
 					.then(function (response){
 						$scope.teamInfo = response.data;
+						console.log($scope.teamInfo);
 					})
 					.catch(function (error){
 						console.log(error);

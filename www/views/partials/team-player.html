@@ -1,0 +1,50 @@
+<ion-view view-title="Players of {{tName}}">
+    <ion-content class="padding">
+        <div ng-if="teamPlayers.length > 0">
+            <div class="well" 
+             ng-repeat="player in teamPlayers">
+               <div class="col col-1">
+                    <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <td>Name:</td>
+                                    <td>{{player.name}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Position:</td>
+                                    <td>{{player.position}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Jersey number:</td>
+                                    <td>{{player.jerseyNumber}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Date of birth:</td>
+                                    <td>{{player.dateOfBirth}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Nationality:</td>
+                                    <td>{{player.nationality}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Contract until:</td>
+                                    <td>{{player.contractUntil}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Market value:</td>
+                                    <td>{{player.marketValue}}</td>
+                                </tr>
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div ng-if="teamPlayers.length == 0">
+           <div class="alert alert-danger text-center" role="alert">
+              <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+              <span class="sr-only">Error:</span>
+              Information Unavailable
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

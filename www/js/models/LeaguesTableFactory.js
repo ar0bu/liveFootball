@@ -62,6 +62,24 @@
 				return $http(getTeam);
 			},
 
+			getTeamFix: function (teamID){
+				var getTeamFix = {
+					method: 'GET',
+					url: urls.TEAM_URL + "/" + teamID + "/fixtures",
+					headers: urls.HEAD
+				}
+				return $http(getTeamFix);
+			},
+
+			getTeamPlayer: function(teamID){
+				var getTeamPlayer = {
+					method: 'GET',
+					url: urls.TEAM_URL + "/" + teamID + "/players",
+					headers: urls.HEAD
+				}
+				return $http(getTeamPlayer);
+			},
+
 		});
 
 		return LeaguesTable;

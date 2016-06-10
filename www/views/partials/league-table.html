@@ -25,164 +25,166 @@
         </div>
       </div>
 
-      <div class="col col-1">
-        <div class="well">
-            <h4 class="title text-center">Group: {{leagueTable.standings.A[0].group}}</h4>
-            <table class="table table-bordered">
-              <thead>
-                  <tr>
-                    <td>Rank</td>
-                    <td>Team</td>
-                    <td>Match</td>
-                    <td>Points</td>
+      <div ng-if="leagueTable.leagueCaption === 'European Championships France 2016'">
+        <div class="col col-1">
+          <div class="well">
+              <h4 class="title text-center">Group: {{leagueTable.standings.A[0].group}}</h4>
+              <table class="table table-bordered">
+                <thead>
+                    <tr>
+                      <td>Rank</td>
+                      <td>Team</td>
+                      <td>Match</td>
+                      <td>Points</td>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="team in leagueTable.standings.A | orderBy: 'rank'">
+                    <td>{{team.rank}}</td>
+                    <td>
+                      <img ng-src="{{team.crestURI}}" class="img-responsive euro-img" />
+                      {{team.team}}
+                    </td>
+                    <td>{{team.playedGames}}</td>
+                    <td>{{team.points}}</td>
                   </tr>
-              </thead>
-              <tbody>
-                <tr ng-repeat="team in leagueTable.standings.A | orderBy: 'rank'">
-                  <td>{{team.rank}}</td>
-                  <td>
-                    <img ng-src="{{team.crestURI}}" class="img-responsive euro-img" />
-                    {{team.team}}
-                  </td>
-                  <td>{{team.playedGames}}</td>
-                  <td>{{team.points}}</td>
-                </tr>
-              </tbody>
-            </table>
+                </tbody>
+              </table>
+          </div>
         </div>
-      </div>
 
-      <div class="col col-1">
-        <div class="well">
-            <h4 class="title text-center">Group: {{leagueTable.standings.B[0].group}}</h4>
-            <table class="table table-bordered">
-              <thead>
-                  <tr>
-                    <td>Rank</td>
-                    <td>Team</td>
-                    <td>Match</td>
-                    <td>Points</td>
+        <div class="col col-1">
+          <div class="well">
+              <h4 class="title text-center">Group: {{leagueTable.standings.B[0].group}}</h4>
+              <table class="table table-bordered">
+                <thead>
+                    <tr>
+                      <td>Rank</td>
+                      <td>Team</td>
+                      <td>Match</td>
+                      <td>Points</td>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="team in leagueTable.standings.B | orderBy: 'rank'">
+                    <td>{{team.rank}}</td>
+                    <td>
+                      <img ng-src="{{team.crestURI}}" class="img-responsive euro-img" />
+                      {{team.team}}
+                    </td>
+                    <td>{{team.playedGames}}</td>
+                    <td>{{team.points}}</td>
                   </tr>
-              </thead>
-              <tbody>
-                <tr ng-repeat="team in leagueTable.standings.B | orderBy: 'rank'">
-                  <td>{{team.rank}}</td>
-                  <td>
-                    <img ng-src="{{team.crestURI}}" class="img-responsive euro-img" />
-                    {{team.team}}
-                  </td>
-                  <td>{{team.playedGames}}</td>
-                  <td>{{team.points}}</td>
-                </tr>
-              </tbody>
-            </table>
+                </tbody>
+              </table>
+          </div>
         </div>
-      </div>
 
-      <div class="col col-1">
-        <div class="well">
-            <h4 class="title text-center">Group: {{leagueTable.standings.C[0].group}}</h4>
-            <table class="table table-bordered">
-              <thead>
-                  <tr>
-                    <td>Rank</td>
-                    <td>Team</td>
-                    <td>Match</td>
-                    <td>Points</td>
+        <div class="col col-1">
+          <div class="well">
+              <h4 class="title text-center">Group: {{leagueTable.standings.C[0].group}}</h4>
+              <table class="table table-bordered">
+                <thead>
+                    <tr>
+                      <td>Rank</td>
+                      <td>Team</td>
+                      <td>Match</td>
+                      <td>Points</td>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="team in leagueTable.standings.C | orderBy: 'rank'">
+                    <td>{{team.rank}}</td>
+                    <td>
+                      <img ng-src="{{team.crestURI}}" class="img-responsive euro-img" />
+                      {{team.team}}
+                    </td>
+                    <td>{{team.playedGames}}</td>
+                    <td>{{team.points}}</td>
                   </tr>
-              </thead>
-              <tbody>
-                <tr ng-repeat="team in leagueTable.standings.C | orderBy: 'rank'">
-                  <td>{{team.rank}}</td>
-                  <td>
-                    <img ng-src="{{team.crestURI}}" class="img-responsive euro-img" />
-                    {{team.team}}
-                  </td>
-                  <td>{{team.playedGames}}</td>
-                  <td>{{team.points}}</td>
-                </tr>
-              </tbody>
-            </table>
+                </tbody>
+              </table>
+          </div>
         </div>
-      </div>
 
-      <div class="col col-1">
-        <div class="well">
-            <h4 class="title text-center">Group: {{leagueTable.standings.D[0].group}}</h4>
-            <table class="table table-bordered">
-              <thead>
-                  <tr>
-                    <td>Rank</td>
-                    <td>Team</td>
-                    <td>Match</td>
-                    <td>Points</td>
+        <div class="col col-1">
+          <div class="well">
+              <h4 class="title text-center">Group: {{leagueTable.standings.D[0].group}}</h4>
+              <table class="table table-bordered">
+                <thead>
+                    <tr>
+                      <td>Rank</td>
+                      <td>Team</td>
+                      <td>Match</td>
+                      <td>Points</td>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="team in leagueTable.standings.D | orderBy: 'rank'">
+                    <td>{{team.rank}}</td>
+                    <td>
+                      <img ng-src="{{team.crestURI}}" class="img-responsive euro-img" />
+                      {{team.team}}
+                    </td>
+                    <td>{{team.playedGames}}</td>
+                    <td>{{team.points}}</td>
                   </tr>
-              </thead>
-              <tbody>
-                <tr ng-repeat="team in leagueTable.standings.D | orderBy: 'rank'">
-                  <td>{{team.rank}}</td>
-                  <td>
-                    <img ng-src="{{team.crestURI}}" class="img-responsive euro-img" />
-                    {{team.team}}
-                  </td>
-                  <td>{{team.playedGames}}</td>
-                  <td>{{team.points}}</td>
-                </tr>
-              </tbody>
-            </table>
+                </tbody>
+              </table>
+          </div>
         </div>
-      </div>
-      <div class="col col-1">
-        <div class="well">
-            <h4 class="title text-center">Group: {{leagueTable.standings.E[0].group}}</h4>
-            <table class="table table-bordered">
-              <thead>
-                  <tr>
-                    <td>Rank</td>
-                    <td>Team</td>
-                    <td>Match</td>
-                    <td>Points</td>
+        <div class="col col-1">
+          <div class="well">
+              <h4 class="title text-center">Group: {{leagueTable.standings.E[0].group}}</h4>
+              <table class="table table-bordered">
+                <thead>
+                    <tr>
+                      <td>Rank</td>
+                      <td>Team</td>
+                      <td>Match</td>
+                      <td>Points</td>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="team in leagueTable.standings.E | orderBy: 'rank'">
+                    <td>{{team.rank}}</td>
+                    <td>
+                      <img ng-src="{{team.crestURI}}" class="img-responsive euro-img" />
+                      {{team.team}}
+                    </td>
+                    <td>{{team.playedGames}}</td>
+                    <td>{{team.points}}</td>
                   </tr>
-              </thead>
-              <tbody>
-                <tr ng-repeat="team in leagueTable.standings.E | orderBy: 'rank'">
-                  <td>{{team.rank}}</td>
-                  <td>
-                    <img ng-src="{{team.crestURI}}" class="img-responsive euro-img" />
-                    {{team.team}}
-                  </td>
-                  <td>{{team.playedGames}}</td>
-                  <td>{{team.points}}</td>
-                </tr>
-              </tbody>
-            </table>
+                </tbody>
+              </table>
+          </div>
         </div>
-      </div>
 
-      <div class="col col-1">
-        <div class="well">
-            <h4 class="title text-center">Group: {{leagueTable.standings.F[0].group}}</h4>
-            <table class="table table-bordered">
-              <thead>
-                  <tr>
-                    <td>Rank</td>
-                    <td>Team</td>
-                    <td>Match</td>
-                    <td>Points</td>
+        <div class="col col-1">
+          <div class="well">
+              <h4 class="title text-center">Group: {{leagueTable.standings.F[0].group}}</h4>
+              <table class="table table-bordered">
+                <thead>
+                    <tr>
+                      <td>Rank</td>
+                      <td>Team</td>
+                      <td>Match</td>
+                      <td>Points</td>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="team in leagueTable.standings.F | orderBy: 'rank'">
+                    <td>{{team.rank}}</td>
+                    <td>
+                      <img ng-src="{{team.crestURI}}" class="img-responsive euro-img" />
+                      {{team.team}}
+                    </td>
+                    <td>{{team.playedGames}}</td>
+                    <td>{{team.points}}</td>
                   </tr>
-              </thead>
-              <tbody>
-                <tr ng-repeat="team in leagueTable.standings.F | orderBy: 'rank'">
-                  <td>{{team.rank}}</td>
-                  <td>
-                    <img ng-src="{{team.crestURI}}" class="img-responsive euro-img" />
-                    {{team.team}}
-                  </td>
-                  <td>{{team.playedGames}}</td>
-                  <td>{{team.points}}</td>
-                </tr>
-              </tbody>
-            </table>
+                </tbody>
+              </table>
+          </div>
         </div>
       </div>
     </ion-content>

@@ -31,7 +31,7 @@
             })
             .state('tabs.league-info', {
                 url: "/league-info",
-                params: {leagueID : null}, 
+                params: {leagueID : null},
                 views: {
                     'main-tab': {
                         templateUrl: "views/partials/league-info.html",
@@ -71,7 +71,7 @@
             })
             .state('tabs.team-info', {
                 url: "/team-info",
-                params: {teamID: null}, 
+                params: {teamID: null},
                 views: {
                     'main-tab': {
                         templateUrl: "views/partials/team-info.html",

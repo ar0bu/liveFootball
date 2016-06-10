@@ -20,3 +20,10 @@
 .block {
 	display: block;
 }
+
+.euro-img {
+	max-width: 20%;
+	display: inline-block;
+	margin-right:5%;
+	margin-top: -2%;
+}
